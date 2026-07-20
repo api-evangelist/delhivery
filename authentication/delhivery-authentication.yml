@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: https://delhivery-express-api-doc.readme.io/reference/introduction-1
+docs: https://help.delhivery.com/docs/client-developer-portal-1
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    Delhivery APIs authenticate with a per-client API token issued from the Delhivery
+    One developer portal. The token is passed in the request headers. There is no
+    public OAuth 2.0 / OpenID Connect flow documented for the Express and B2C APIs;
+    scopes therefore do not apply. Testing and production use distinct base URLs and,
+    typically, distinct tokens.
+schemes:
+- name: ClientToken
+  type: apiKey
+  in: header
+  header: Authorization
+  format: 'Token <api_token>'
+  description: >-
+    Client API token issued from the Delhivery One developer portal
+    (ucp.delhivery.com / one.delhivery.com developer-portal). Sent on every request
+    in the Authorization header as `Token <api_token>`. Test-environment and
+    production-environment tokens differ.
+  sources:
+  - https://delhivery-express-api-doc.readme.io/reference/must-to-have-for-integration
+environments:
+- name: staging
+  base_url: https://staging-express.delhivery.com
+- name: production
+  base_url: https://track.delhivery.com
+credentials:
+  issuance: Delhivery One developer portal (login required)
+  docs: https://one.delhivery.com/developer-portal/documents
