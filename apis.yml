@@ -1,9 +1,29 @@
 aid: delhivery
 name: Delhivery
-description: 'Delhivery is a company surfaced as a portfolio company of addition, softbank-vision-fund
-  and added to the API Evangelist network as a stub for enrichment. Sector: logistics. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: >-
+  Delhivery is India's largest integrated third-party logistics (3PL) service provider,
+  offering express parcel delivery, part-truckload and full-truckload freight, warehousing,
+  supply-chain services, cross-border logistics and shipment tracking. Its developer
+  platform exposes REST APIs for pincode serviceability, waybill generation, order
+  creation and manifestation, shipment tracking (pull and webhook push), shipping-cost
+  invoicing, packing-slip and shipping-label generation, pickup requests, client-warehouse
+  management and NDR (non-delivery report) actions. APIs are consumed with a client
+  API token and are documented across the Delhivery One developer portal, the Express
+  Last-Mile API reference (ReadMe) and the OS1 platform docs.
 url: https://raw.githubusercontent.com/api-evangelist/delhivery/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.delhivery.com/banner/homepage.webp
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -13,16 +33,120 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Logistics
-apis: []
+- Shipping
+- Supply Chain
+- Freight
+- Ecommerce
+- Tracking
+- Fulfillment
+- India
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Delhivery Express Last-Mile API
+  description: >-
+    Last-mile express parcel API covering pincode serviceability, bulk and single
+    waybill generation, order creation/manifestation, shipment tracking, order edit
+    and cancel, shipping-charge invoicing, packing-slip generation, pickup requests,
+    client-warehouse creation/edit, and asynchronous NDR package actions. Authenticated
+    with a client API token passed in the request headers. JSON request/response.
+  humanURL: https://delhivery-express-api-doc.readme.io/reference/introduction-1
+  baseURL: https://track.delhivery.com
+  tags:
+  - Shipping
+  - Tracking
+  - Last-Mile
+  - Waybill
+  properties:
+  - type: Documentation
+    url: https://delhivery-express-api-doc.readme.io/
+  - type: APIReference
+    url: https://delhivery-express-api-doc.readme.io/reference/introduction-1
+  - type: GettingStarted
+    url: https://delhivery-express-api-doc.readme.io/reference/getting-started-with-your-api
+  - type: Webhooks
+    url: asyncapi/delhivery-tracking-webhooks.yml
+  - type: LLMsTxt
+    url: llms/delhivery-llms.txt
+- name: Delhivery One B2C Shipping API
+  description: >-
+    Self-service B2C shipping APIs exposed through the Delhivery One developer portal:
+    pincode serviceability, fetch waybill, client warehouse creation/updation, package
+    shipment creation/updation, shipment tracking, shipping-cost calculation, shipping-label
+    generation, pickup request creation and NDR shipment updation. Includes a staging
+    test environment and a self-service execute/test console behind login.
+  humanURL: https://one.delhivery.com/developer-portal/documents
+  baseURL: https://ucp-app-gateway.delhivery.com/open/
+  tags:
+  - Shipping
+  - B2C
+  - Ecommerce
+  properties:
+  - type: DeveloperPortal
+    url: https://one.delhivery.com/developer-portal/documents
+  - type: Sandbox
+    url: https://ucp.delhivery.com/developer-portal/v1/execute
+- name: Delhivery OS1 Platform API
+  description: >-
+    OS1 is Delhivery's operating-system platform for logistics; its API reference
+    documents REST endpoints across the OS1 sandbox and production environments for
+    building on the underlying logistics infrastructure.
+  humanURL: https://docs.os1.delhivery.com/reference/api-reference-overview
+  baseURL: https://api.os1.delhivery.com
+  tags:
+  - Platform
+  - Logistics
+  properties:
+  - type: Documentation
+    url: https://docs.os1.delhivery.com/reference/api-reference-overview
 common:
 - type: Website
   url: https://www.delhivery.com
+- type: DeveloperPortal
+  url: https://one.delhivery.com/developer-portal/documents
+- type: Documentation
+  url: https://delhivery-express-api-doc.readme.io/
+- type: APIReference
+  url: https://delhivery-express-api-doc.readme.io/reference/introduction-1
+- type: GettingStarted
+  url: https://delhivery-express-api-doc.readme.io/reference/getting-started-with-your-api
+- type: HelpCenter
+  url: https://help.delhivery.com/docs/client-developer-portal-1
+- type: Support
+  url: https://delhivery-express-api-doc.readme.io/reference/escalation-matrix
+- type: Blog
+  url: https://www.delhivery.com/blog-2/
+- type: Pricing
+  url: https://www.delhivery.com/pricing
+- type: SignUp
+  url: https://one.delhivery.com/
+- type: TermsOfService
+  url: https://www.delhivery.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.delhivery.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/delhivery
+- type: Webhooks
+  url: asyncapi/delhivery-tracking-webhooks.yml
+- type: Authentication
+  url: authentication/delhivery-authentication.yml
+- type: Conventions
+  url: conventions/delhivery-conventions.yml
+- type: Components
+  url: components/delhivery-components.yml
+- type: LLMsTxt
+  url: llms/delhivery-llms.txt
+- type: DomainSecurity
+  url: security/delhivery-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

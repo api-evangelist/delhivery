@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of Delhivery API/website hosts
+summary: >-
+  No genuine /.well-known/ discovery documents are published by Delhivery. www.delhivery.com
+  returns HTTP 200 for every /.well-known/ path but the body is the site's Nuxt SPA
+  catch-all HTML (Content-Type text/html), not a real security.txt / OIDC / api-catalog
+  document, so none are captured. The apidocs (S3) host returns 403 and the tracking
+  host returns 404. No document was saved.
+hosts:
+- host: https://www.delhivery.com
+  documents:
+  - {path: /.well-known/security.txt, status: 200, real: false, note: SPA catch-all text/html}
+  - {path: /.well-known/openid-configuration, status: 200, real: false, note: SPA catch-all text/html}
+  - {path: /.well-known/oauth-authorization-server, status: 200, real: false, note: SPA catch-all text/html}
+  - {path: /.well-known/api-catalog, status: 200, real: false, note: SPA catch-all text/html}
+  - {path: /.well-known/ai-plugin.json, status: 200, real: false, note: SPA catch-all text/html}
+- host: https://apidocs.delhivery.in
+  documents:
+  - {path: /.well-known/security.txt, status: 403, real: false}
+  - {path: /.well-known/openid-configuration, status: 403, real: false}
+- host: https://track.delhivery.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404, real: false}
+  - {path: /.well-known/openid-configuration, status: 404, real: false}
+- host: https://staging-express.delhivery.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404, real: false}

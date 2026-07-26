@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://delhivery-express-api-doc.readme.io/
+summary: >-
+  Delhivery publishes first-party e-commerce platform plugins that wrap its shipping
+  APIs (serviceability, order creation, label/packing-slip, tracking) into prebuilt
+  storefront integrations. These are drop-in extensions for major commerce platforms,
+  distinct from language SDKs (Delhivery does not publish an official public client
+  library).
+families:
+- family: ecommerce-plugins
+  description: Prebuilt storefront plugins that integrate Delhivery shipping into commerce platforms.
+  official: true
+  components:
+  - name: Magento Plugin
+    platform: Magento
+    version: 2.0 and above
+    docs: https://delhivery-express-api-doc.readme.io/reference/guide-to-plugin
+  - name: OpenCart Plugin
+    platform: OpenCart
+    version: 3.0 and above
+    docs: https://delhivery-express-api-doc.readme.io/reference/opencart-plugin
+  - name: WooCommerce Plugin
+    platform: WooCommerce (WordPress)
+    docs: https://delhivery-express-api-doc.readme.io/reference/woocommercewordpress-plugin
+  - name: Shopify Plugin
+    platform: Shopify
+    docs: https://delhivery-express-api-doc.readme.io/reference/shopify-plugin-1
+notes: >-
+  Third-party community libraries exist (e.g. a Laravel PHP Delhivery SDK) but are
+  not first-party and are not catalogued here as official.

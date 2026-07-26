@@ -1,0 +1,61 @@
+generated: '2026-07-18'
+method: searched
+source: https://delhivery-express-api-doc.readme.io/
+docs: https://delhivery-express-api-doc.readme.io/reference/best-practises-to-follow-the-api-documentation
+summary: >-
+  Cross-cutting request/response conventions for the Delhivery Express Last-Mile and
+  Delhivery One B2C REST APIs, derived from the public ReadMe reference and developer
+  portal. Delhivery uses token-based auth in headers, JSON payloads, distinct
+  staging vs production hosts, and a webhook (PUSH) model for asynchronous tracking.
+authentication:
+  style: api-key
+  location: header
+  header: Authorization
+  format: 'Token <api_token>'
+  ref: authentication/delhivery-authentication.yml
+content_types:
+  request: application/json
+  response: application/json
+  notes: >-
+    Most write operations (order creation, edit, cancel, warehouse create/edit,
+    pickup, NDR) are POST with JSON bodies; read operations (pincode serviceability,
+    fetch waybill, tracking, invoice) are GET. Some legacy endpoints also accept
+    form-encoded `format=json&data=<payload>` bodies.
+environments:
+  scheme: separate-hosts
+  staging: https://staging-express.delhivery.com
+  production: https://track.delhivery.com
+  notes: Test values and tokens are used against staging before switching to production.
+idempotency:
+  supported: false
+  notes: >-
+    No documented idempotency-key header. Waybill uniqueness is the practical
+    dedupe key — each order/shipment is bound to a unique waybill number, and bulk
+    waybills are pre-generated and reserved before order creation to avoid duplicates.
+pagination:
+  supported: unknown
+  notes: >-
+    Not documented for the public Express endpoints; tracking and serviceability
+    are keyed by waybill/pincode rather than paged collections.
+async:
+  model: webhook
+  description: >-
+    Tracking updates are delivered via a PUSH API (webhook) as shipment status
+    changes; the NDR package-action API is asynchronous and returns a UPL id whose
+    status is polled via the Get NDR status API.
+  ref: asyncapi/delhivery-tracking-webhooks.yml
+error_envelope:
+  format: json
+  notes: >-
+    Responses return JSON with success/error indicators and message fields; a
+    formal RFC 9457 problem+json envelope is not documented. No public machine-readable
+    error-code registry was found.
+rate_limiting:
+  documented: false
+versioning:
+  scheme: undocumented
+  notes: No explicit API version segment is documented for the Express endpoints.
+cross_links:
+  authentication: authentication/delhivery-authentication.yml
+  webhooks: asyncapi/delhivery-tracking-webhooks.yml
+  components: components/delhivery-components.yml

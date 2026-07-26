@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: https://delhivery-express-api-doc.readme.io/reference/tracking-via-push-api-webhook-1
+spec_type: Webhooks
+summary: >-
+  Delhivery delivers shipment tracking updates over a PUSH API (webhook). Rather than
+  polling the Order Tracking API, clients register an endpoint to which Delhivery posts
+  status updates as a package moves through the network (forward flow client-warehouse
+  to end-customer, and reverse/pickup flow). The asynchronous NDR package-action API
+  is a related async surface that returns a UPL id resolved via a status API.
+webhooks:
+- name: tracking-push
+  event: shipment.status.updated
+  direction: outbound
+  transport: https-post
+  content_type: application/json
+  description: >-
+    Delhivery posts a shipment status update to the client-registered callback URL
+    whenever the tracked package changes status. Payload carries the waybill number,
+    current status, status type/location and timestamps, mirroring the Order Tracking
+    API response shape.
+  docs: https://delhivery-express-api-doc.readme.io/reference/tracking-via-push-api-webhook-1
+delivery:
+  registration: >-
+    Callback URL is registered with Delhivery during onboarding / via the developer
+    portal; retries and status-type semantics follow the forward and reverse package
+    status flows.
+  status_flows:
+  - https://delhivery-express-api-doc.readme.io/reference/prepaid-and-cod-shipments
+  - https://delhivery-express-api-doc.readme.io/reference/reverse-pickups
+related_async:
+- name: ndr-package-action
+  pattern: async-job
+  description: >-
+    NDR (non-delivery report) package-action API is asynchronous; it accepts an
+    action (deferred delivery date, edit details, reattempt) and returns a UPL id
+    always. The Get NDR status API resolves that UPL id to a final status.
+  docs: https://delhivery-express-api-doc.readme.io/reference/asynchronous-ndr-package-action-api
+notes: >-
+  No machine-readable AsyncAPI document is published by Delhivery; this file captures
+  the documented webhook/event surface. spec_type is Webhooks (not a full AsyncAPI spec).
