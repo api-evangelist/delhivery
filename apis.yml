@@ -40,6 +40,16 @@ tags:
 - Shipping
 - Supply Chain
 - Freight
+- E-Commerce
+- Tracking
+- Fulfillment
+- India
+tags_raw:
+- Company
+- Logistics
+- Shipping
+- Supply Chain
+- Freight
 - Ecommerce
 - Tracking
 - Fulfillment
@@ -60,6 +70,11 @@ apis:
   humanURL: https://delhivery-express-api-doc.readme.io/reference/introduction-1
   baseURL: https://track.delhivery.com
   tags:
+  - Shipping
+  - Tracking
+  - Last Mile
+  - Waybill
+  tags_raw:
   - Shipping
   - Tracking
   - Last-Mile
@@ -85,6 +100,10 @@ apis:
   humanURL: https://one.delhivery.com/developer-portal/documents
   baseURL: https://ucp-app-gateway.delhivery.com/open/
   tags:
+  - Shipping
+  - B2C
+  - E-Commerce
+  tags_raw:
   - Shipping
   - B2C
   - Ecommerce
