@@ -11,6 +11,17 @@ description: >-
   API token and are documented across the Delhivery One developer portal, the Express
   Last-Mile API reference (ReadMe) and the OS1 platform docs.
 url: https://raw.githubusercontent.com/api-evangelist/delhivery/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
