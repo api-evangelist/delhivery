@@ -84,13 +84,14 @@ apis:
   tags:
   - Shipping
   - Tracking
-  - Last Mile
+  - Last Mile Delivery
   - Waybill
   tags_raw:
   - Shipping
   - Tracking
   - Last-Mile
   - Waybill
+  - Last Mile
   properties:
   - type: Documentation
     url: https://delhivery-express-api-doc.readme.io/
@@ -113,7 +114,7 @@ apis:
   baseURL: https://ucp-app-gateway.delhivery.com/open/
   tags:
   - Shipping
-  - B2C
+  - Consumer
   - E-Commerce
   tags_raw:
   - Shipping
