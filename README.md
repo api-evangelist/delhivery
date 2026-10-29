@@ -64,6 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Delhivery is a company surfaced as a portfolio company of addition, softbank-vision-fund and added to the API Evangelist network as a stub for enrichment. Sector: logistics. This profile is a lead awaiting the enrichment pipeline.
+Delhivery is India's largest integrated third-party logistics (3PL) service provider, offering express parcel delivery, part-truckload and full-truckload freight, warehousing, supply-chain services, cross-border logistics and shipment tracking. Its developer platform exposes REST APIs for pincode serviceability, waybill generation, order creation and manifestation, shipment tracking (pull and webhook push), shipping-cost invoicing, packing-slip and shipping-label generation, pickup requests, client-warehouse management and NDR (non-delivery report) actions. APIs are consumed with a client API token and are documented across the Delhivery One developer portal, the Express Last-Mile API reference (ReadMe) and the OS1 platform docs.
 
-Backed by: addition, softbank-vision-fund — https://www.delhivery.com
+**Areas:** Company · Logistics · Shipping · Supply Chain · Freight · E-Commerce · Tracking · Fulfillment · India
+
+## Delhivery on APIs.io
+
+Everything profiled for Delhivery is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/delhivery/](https://apis.io/providers/delhivery/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Delhivery Express Last-Mile API](https://apis.io/apis/delhivery/delhivery-express-last-mile-api/) — Last-mile express parcel API covering pincode serviceability, bulk and single waybill generation, order creation/manifestation, shipment tracking, order…
+- [Delhivery One B2C Shipping API](https://apis.io/apis/delhivery/delhivery-one-b2c-shipping-api/) — Self-service B2C shipping APIs exposed through the Delhivery One developer portal: pincode serviceability, fetch waybill, client warehouse…
+- [Delhivery OS1 Platform API](https://apis.io/apis/delhivery/delhivery-os1-platform-api/) — OS1 is Delhivery's operating-system platform for logistics; its API reference documents REST endpoints across the OS1 sandbox and production environments…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Delhivery Tracking Webhooks](https://apis.io/asyncapis/delhivery/delhivery-tracking-webhooks/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Delhivery Authentication](https://apis.io/security/delhivery/delhivery-authentication/)
+- [Delhivery Domain Security](https://apis.io/security/delhivery/delhivery-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.delhivery.com)
+- [Documentation](https://delhivery-express-api-doc.readme.io/)
+- [Getting started](https://delhivery-express-api-doc.readme.io/reference/getting-started-with-your-api)
+- [API reference](https://delhivery-express-api-doc.readme.io/reference/introduction-1)
+- [Pricing](https://www.delhivery.com/pricing)
+- [Sign up](https://one.delhivery.com/)
+- [Support](https://delhivery-express-api-doc.readme.io/reference/escalation-matrix)
+- [Blog](https://www.delhivery.com/blog-2/)
+- [Terms of service](https://www.delhivery.com/terms-and-conditions)
+- [Privacy policy](https://www.delhivery.com/privacy-policy)
+- [GitHub](https://github.com/delhivery)
+
+## API Evangelist rating
+
+**Kin Score 30.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 39.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 10.5 |
+
+**Agent readiness 19.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/delhivery/](https://apis.io/providers/delhivery/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Delhivery: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/delhivery/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
